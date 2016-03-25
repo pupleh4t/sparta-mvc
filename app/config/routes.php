@@ -16,8 +16,8 @@ $router->addPost("/user/login", array('controller'=>'user', 'action'=>'login'));
 $router->addGet("/data/lahan", array('controller' => 'index', 'action'=>'home'));
 $router->addPost("/data/slot", array('controller'=>'maps', 'action'=>'slot'));
 $router->addPost("/data/latlng", array('controller'=>'maps', 'action'=>'postlatlng'));
-$router->addPost("/data/update", array('controller'=>'maps', 'action'=>'update'));
-$router->addPost("/data/savetemp", array('controller'=>'maps', 'action'=>'saveTemp'));
+$router->addPost("/data/calibrate", array('controller'=>'maps', 'action'=>'calibrate'));
+$router->addPost("/temp/savetemp", array('controller'=>'maps', 'action'=>'saveTemp'));
 
 $router->notFound(array("controller"=>"index", "action"=>"route404"));
 
