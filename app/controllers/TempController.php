@@ -67,7 +67,7 @@ class TempController extends \Phalcon\Mvc\Controller
         return $response;
     }
 
-    public function postlatlngAction()
+    public function singleLatLngAction()
     {
         $json_data = $this->request->getJsonRawBody();
         $lat = $json_data->latitude;
@@ -87,7 +87,7 @@ class TempController extends \Phalcon\Mvc\Controller
         return $response;
     }
 
-    public function postMultiLatLngAction()
+    public function multiLatLngAction()
     {
         $json_data = $this->request->getJsonRawBody();
         $id_lahan = $json_data->id_lahan;

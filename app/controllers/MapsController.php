@@ -52,8 +52,6 @@ class MapsController extends \Phalcon\Mvc\Controller
             );
             $response->setJsonContent($json_response);
         }else{
-            $conditions = "id_lahan = :id_lahan:";
-            $parameters = array("id_lahan"=>$id_lahan);
             $midPoints = $geoTools->getMiddlePoint($slots);
 
             $lahan = Lahanparkir::findFirst(array($conditions, "bind"=>$parameters));
@@ -72,5 +70,23 @@ class MapsController extends \Phalcon\Mvc\Controller
         return $response;
     }
 
+    public function getAreaAction()
+    {
+        $json_data = $this->request->getJsonRawBody();
+        $id_lahan = $json_data->id_lahan;
+
+        $response = new Response();
+
+        $areas = Arealahanparkir::find(array("id_lahan = :id_lahan:", "bind"=>array("id_lahan"=>$id_lahan)));
+        foreach ($areas as $marker) {
+            $data[] = array(
+                'latitude' => $marker->latitude,
+                'longitude' => $marker->longitude
+            );
+        }
+
+        $response->setJsonContent(array('id_lahan'=>$id_lahan,'area_data'=>$data));
+        return $response;
+    }
 }
 
