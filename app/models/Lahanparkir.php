@@ -19,6 +19,12 @@ class Lahanparkir extends \Phalcon\Mvc\Model
      *
      * @var string
      */
+    public $alias;
+
+    /**
+     *
+     * @var string
+     */
     public $latitude;
 
     /**
@@ -50,6 +56,12 @@ class Lahanparkir extends \Phalcon\Mvc\Model
      * @var string
      */
     public $jam_tutup;
+
+    /**
+     *
+     * @var string
+     */
+    public $link_gambar;
 
     /**
      * Returns table name mapped in the model.

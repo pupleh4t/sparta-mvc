@@ -27,6 +27,12 @@ class Usercredential extends \Phalcon\Mvc\Model
      *
      * @var string
      */
+    public $type;
+
+    /**
+     *
+     * @var string
+     */
     public $email;
 
     /**
@@ -58,7 +64,7 @@ class Usercredential extends \Phalcon\Mvc\Model
      *
      * @return boolean
      */
-    /*public function validation()
+    public function validation()
     {
         $this->validate(
             new Email(
@@ -74,7 +80,7 @@ class Usercredential extends \Phalcon\Mvc\Model
         }
 
         return true;
-    }*/
+    }
 
     /**
      * Returns table name mapped in the model.

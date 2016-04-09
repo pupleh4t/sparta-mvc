@@ -16,5 +16,17 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/app/library/vendor/bin/puli.phar/" />
+          <root url="phar://$MODULE_DIR$/app/library/vendor/php-http/discovery/bin/puli.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/app/library/vendor/bin/puli.phar/" />
+          <root url="phar://$MODULE_DIR$/app/library/vendor/php-http/discovery/bin/puli.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

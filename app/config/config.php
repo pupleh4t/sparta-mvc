@@ -20,5 +20,10 @@ return new \Phalcon\Config(array(
         'libraryDir'     => APP_PATH . '/app/library/',
         'cacheDir'       => APP_PATH . '/app/cache/',
         'baseUri'        => '/sparta3/',
+    ),
+    'mailgun'   => array(
+        'apiKey'        => 'key-a0a02bcb9aee1f081061a49555998fa2',
+        'domain'        => 'sandboxe4fc15c105724d3099cfc771526a0565.mailgun.org',
+        'fromEmail'     => 'adm.sparta1@gmail.com'
     )
 ));
